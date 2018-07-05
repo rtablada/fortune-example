@@ -2,6 +2,7 @@ import http from 'http';
 import fortuneHTTP from 'fortune-http';
 import fortune from 'fortune';
 import pgAdapter from 'fortune-postgres';
+import jsonApiSerializer from 'fortune-json-api';
 
 const adapter = [pgAdapter, {
   url: 'postgres://postgres@localhost:5432/app_db'
@@ -30,10 +31,9 @@ const store = fortune(recordTypes);
 const listener = fortuneHTTP(store, {
   // The order specifies priority of media type negotiation.
   serializers: [
+    jsonApiSerializer,
     fortuneHTTP.JsonSerializer,
     fortuneHTTP.HtmlSerializer,
-    fortuneHTTP.FormDataSerializer,
-    fortuneHTTP.FormUrlEncodedSerializer
   ]
 });
 

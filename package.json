@@ -7,6 +7,7 @@
     "esm": "^3.0.62",
     "fortune": "^5.4.3",
     "fortune-http": "^1.2.8",
+    "fortune-json-api": "^2.1.5",
     "fortune-postgres": "^1.6.4"
   }
 }
