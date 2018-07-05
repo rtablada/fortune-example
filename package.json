@@ -1,0 +1,12 @@
+{
+  "name": "fortune-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.0.62",
+    "fortune": "^5.4.3",
+    "fortune-http": "^1.2.8",
+    "fortune-postgres": "^1.6.4"
+  }
+}
