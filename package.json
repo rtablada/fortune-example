@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "10.5"
+  },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "esm": "^3.0.62",
     "fortune": "^5.4.3",
     "fortune-http": "^1.2.8",

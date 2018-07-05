@@ -1,11 +1,14 @@
+import dotenv from 'dotenv';
 import http from 'http';
 import fortuneHTTP from 'fortune-http';
 import fortune from 'fortune';
 import pgAdapter from 'fortune-postgres';
 import jsonApiSerializer from 'fortune-json-api';
 
+dotenv.config();
+
 const adapter = [pgAdapter, {
-  url: 'postgres://postgres@localhost:5432/app_db'
+  url: process.env.DATABASE_URL
 }];
 
 const recordTypes = {
@@ -43,4 +46,4 @@ const server = http.createServer((request, response) =>
     debugger;
   }));
 
-server.listen(1337);
+server.listen(process.env.PORT || 3000);
